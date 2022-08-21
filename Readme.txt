@@ -4,6 +4,12 @@
 
 二 資料處理-字串
 
+$str = "人易科技:上 機 測 驗 - 演算法";
+$str = str_replace(":","：",$str);
+$str = str_replace(" ","", $str);
+$str = str_replace("演"," 演", $str);
+echo substr($str,12,-10);	
+
 三 資料處理-陣列
 
   1. 計算出奇數值總和減去偶數值總和
@@ -100,3 +106,34 @@ var_dump($arr_e);
 
 
 六 兩數總和
+
+function twoSum($nums, $target){
+   if(count($nums) < 1 or count($nums) > 103){
+   	return "字串超出限制長度";
+   }
+   
+   
+   for($i=0; $i<count($nums); $i++){
+   	for($j=0; $j<count($nums);$j++){
+	   if($i == $j){
+	     continue;
+	   }
+	   
+	   if($nums[$i] < -109 || $nums[$i] > 109){
+	   	return "該陣列某一數值超出限定範圍";
+	   }
+	   
+	   if($nums[$j] < -109 || $nums[$j] > 109){
+	   	return "該陣列某一數值超出限定範圍";
+	   }
+	   
+	   if(($nums[$j] + $nums[$i]) == $target){
+	     return array($i,$j);
+	   }
+	}
+   }
+   
+  
+}
+
+var_dump((twoSum([3, 2, 4], 6)));
