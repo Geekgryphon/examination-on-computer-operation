@@ -63,4 +63,40 @@
 
 五 邏輯處理-交集 差集 聯集
 
+$arr_a = array(77,5,5,22,13,55,97,4,796,1,0,9);
+$arr_b = array(0,1,2,3,4,5,6,7,8,9);
+$arr_c = array();
+$arr_d = array();
+$arr_e = array();
+
+for($i = 0; $i < count($arr_a); $i++){
+  if(in_array($arr_a[$i], $arr_b)){
+    $arr_c[] = $arr_a[$i];
+  }
+  
+  if(!in_array($arr_a[$i], $arr_b)){
+    $arr_d[] = $arr_a[$i];
+  }
+}
+
+for($i = 0; $i < count($arr_a); $i++){
+  if(!in_array($arr_a[$i], $arr_e)){
+    $arr_e[] = $arr_a[$i];
+  }
+}
+
+for($i = 0; $i < count($arr_b); $i++){
+  if(!in_array($arr_b[$i], $arr_e)){
+    $arr_e[] = $arr_b[$i];
+  }
+}
+
+
+var_dump($arr_c);
+var_dump($arr_d);
+var_dump($arr_e);
+
+
+
+
 六 兩數總和
