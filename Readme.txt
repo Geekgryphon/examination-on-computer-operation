@@ -31,22 +31,21 @@
   $new_arr = array();
 
 	
-	for($i=0; $i < count($arr); $i++){
-	  if($arr[$i] %2 == 0){
-	    $new_arr[1][] = $arr[$i];
-	  }else{
-	    $new_arr[0][] = $arr[$i];
-	  }
-	  
-	}
+  for($i=0; $i < count($arr); $i++){
+    if($arr[$i] %2 == 0){
+      $new_arr[1][] = $arr[$i];
+    }else{
+      $new_arr[0][] = $arr[$i];
+    }
+  }
 	
-	sort($new_arr);
+  sort($new_arr);
 	
-	var_dump($new_arr);
+  var_dump($new_arr);
 
 四 資料排序-正序
 
- 1.不用到語法糖
+ 不用到語法糖
  
  $arr = [77,5,5,22,13,55,97,4,796,1,0,9];
 	
