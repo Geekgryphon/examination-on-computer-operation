@@ -2,6 +2,50 @@
 
 一 物件導向-繼承/介面
 
+相同的部分
+1.會有元介面或父類別的方法
+
+相異的部分
+1.方法介面會是空的，繼承會是有定義過的
+
+Implements
+
+interface Vehicle{
+   public function run();
+}
+
+class Moto implements Vehicle{
+   public function run(){
+   	return "正在用2個輪子行駛中";
+   }
+}
+
+class Car  implements Vehicle{
+   public function run(){
+   	return "正在用4個輪子行駛中";
+   }
+}
+
+Extends
+
+class Vehicle{
+   public function run(){
+   	return "正在行駛中";
+   }
+}
+
+class Moto extends Vehicle{
+   public function run(){
+   	return "正在用2個輪子行駛中";
+   }
+}
+
+class Car extends Vehicle{
+   public function run(){
+   	return "正在用4個輪子行駛中";
+   }
+}
+
 二 資料處理-字串
 
 $str = "人易科技:上 機 測 驗 - 演算法";
